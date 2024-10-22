@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <!-- Required meta tags always come first -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link href="styles.css" rel="stylesheet">
+
+    <style>
+        .leader {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .leader h3 {
+            margin-right: 10px;
+        }
+
+        .square {
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            margin: 10px;
+            display: inline-block;
+            cursor: pointer;
+        }
+
+        .green {
+            background-color: green !important;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Навигация -->
+    <nav class="navbar navbar-light bg-light fixed-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Третья лабораторная</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
+                aria-controls="offcanvasNavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar"
+                aria-labelledby="offcanvasNavbarLabel">
+                <div class="offcanvas-header">
+                    <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Меню</h5>
+                    <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"
+                        aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body">
+                    <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="firstpage.html">Вторая лабораторная</a>
+                            <a class="nav-link" href="twopage.html">Третья лабораторная</a>
+                            <a class="nav-link" href="freepage.html">Четвёртая лабораторная</a>
+                            <a class="nav-link" href="#">Пятая лабораторная</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Основной контент -->
+    <main class="container mt-5 pt-5">
+        <h1>Выставление оценок</h1>
+
+        <!-- Кнопки для выставления оценок -->
+        <div class="btn-group mb-3">
+            <button type="button" class="btn btn-primary" id="set2">Выставить всем 2</button>
+            <button type="button" class="btn btn-secondary" id="set3">Выставить всем 3</button>
+            <button type="button" class="btn btn-success" id="set4">Выставить всем 4</button>
+            <button type="button" class="btn btn-danger" id="set5">Выставить всем 5</button>
+            <button type="button" class="btn btn-warning" id="clearRating">Очистить все</button>
+        </div>
+
+        <!-- Таблица с оценками -->
+        <table class="table mt-3">
+            <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Фамилия</th>
+                    <th scope="col">Оценка</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th scope="row">1</th>
+                    <td>Иванов</td>
+                    <td><input class="rating form-control" type="text" placeholder="Балл" value=""></td>
+                </tr>
+                <tr>
+                    <th scope="row">2</th>
+                    <td>Петров</td>
+                    <td><input class="rating form-control" type="text" placeholder="Балл" value=""></td>
+                </tr>
+                <tr>
+                    <th scope="row">3</th>
+                    <td>Сидоров</td>
+                    <td><input class="rating form-control" type="text" placeholder="Балл" value=""></td>
+                </tr>
+            </tbody>
+        </table>
+
+        <!-- Кнопка для подсчета среднего балла -->
+        <button type="button" class="btn btn-warning" id="calculateAverage">Посчитать средний балл</button>
+
+        <!-- Вывод среднего балла -->
+        <p class="mt-3">Средний балл: <span id="average">0</span></p>
+
+        <!-- Кнопка для увеличения размера квадратов -->
+        <button type="button" class="btn btn-info" id="doubleSize">Увеличить квадраты в 2 раза</button>
+
+        <!-- Блок с квадратами -->
+        <div class="container text-center mt-5">
+            <h1>Красные и Зеленые Квадраты</h1>
+            <div id="squareContainer" class="d-flex justify-content-center flex-wrap">
+                <!-- Квадраты будут здесь -->
+            </div>
+        </div>
+
+    </main>
+
+    <!-- JavaScript -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+
+    <!-- Скрипт для работы с квадратами -->
+    <script>
+        let fruits = ["green", "blue", "white"]; // Массив цветов
+        document.addEventListener("DOMContentLoaded", function () {
+            const squareContainer = document.getElementById('squareContainer');
+            const numSquares = 1;  // Количество квадратов, можно изменить
+
+            // Функция для создания и добавления квадратов
+            function createSquares(n) {
+                for (let i = 0; i < n; i++) {
+                    let square = document.createElement('div');
+                    square.classList.add('square');
+                    let colorIndex = 0; // Индекс для отслеживания текущего цвета
+
+                    // Добавляем событие клика для смены цвета
+                    square.addEventListener('click', function () {
+                        // Удаляем предыдущий цвет
+                        square.classList.remove(fruits[colorIndex]);
+
+                        // Увеличиваем индекс и возвращаемся к нулю, если достигли конца массива
+                        colorIndex = (colorIndex + 1) % fruits.length;
+
+                        // Присваиваем новый цвет
+                        square.classList.add(fruits[colorIndex]);
+                    });
+
+                    squareContainer.appendChild(square);
+                }
+            }
+
+            // Создаем квадраты
+            createSquares(numSquares);
+
+            // Увеличить размер квадратов в 2 раза при нажатии на кнопку
+            document.getElementById('doubleSize').addEventListener('click', function () {
+                const squares = document.querySelectorAll('.square');
+                squares.forEach(function (square) {
+                    let currentWidth = parseInt(window.getComputedStyle(square).width, 10);
+                    let currentHeight = parseInt(window.getComputedStyle(square).height, 10);
+
+                    // Увеличиваем ширину и высоту в 2 раза
+                    square.style.width = (currentWidth * 2) + 'px';
+                    square.style.height = (currentHeight * 2) + 'px';
+                });
+            });
+        });
+    </script>
+
+</body>
+
+</html>

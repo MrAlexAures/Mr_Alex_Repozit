@@ -1,0 +1,87 @@
+.row-header{
+    margin:0px auto;
+    padding:0px;
+}
+
+.row-content {
+    margin:0px auto;
+    padding: 50px 0px 50px 0px;
+    border-bottom: 1px ridge;
+    min-height:400px;
+}
+
+.footer{
+    background-color: #D1C4E9;
+    margin:0px auto;
+    padding: 20px 0px 20px 0px;
+}
+.jumbotron {
+    padding:70px 30px 70px 30px;
+    margin:0px auto;
+    background: #9575CD ;
+    color:floralwhite;
+}
+
+address{
+    font-size:80%;
+    margin:0px;
+    color:#0f0f0f;
+}
+
+ .leader-card {
+            border: 2px solid #007bff; /* Цвет рамки */
+            border-radius: 10px; /* Закругление углов */
+            margin-bottom: 100px; /* Отступ между карточками */
+}
+.radius { border-radius: 10px; /* Закругление углов */ }
+
+.leader {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 20px;
+            cursor: pointer;
+            transition: transform 0.2s ease-in-out;
+        }
+
+        .leader h3 {
+            margin-bottom: 10px;
+        }
+
+        .leader h5 {
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .radius {
+            cursor: pointer;
+            transition: transform 0.2s ease-in-out;
+            border-radius: 10px;
+            width: 100%;
+            max-width: 350px;
+        }
+
+        .radius:hover {
+            transform: scale(1.05);
+        }
+
+        .collapse-content {
+            padding: 20px;
+            background-color: #f7f7f7;
+            border-radius: 5px;
+            margin-top: 10px;
+        }
+
+        .collapse-button {
+            background-color: #ff7e5f;
+            color: white;
+            border: none;
+            padding: 5px 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        .collapse-button:hover {
+            background-color: #feb47b;
+        }

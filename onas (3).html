@@ -1,0 +1,147 @@
+﻿<!DOCTYPE html> 
+<html lang="ru"> 
+ 
+<head> 
+    <!-- Required meta tags always come first --> 
+    <meta charset="utf-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"> 
+    <meta http-equiv="x-ua-compatible" content="ie=edge"> 
+ 
+    <!-- Bootstrap CSS --> 
+    <link rel="stylesheet" href="css/bootstrap.min.css"> 
+    <link href="styles.css" rel="stylesheet"> 
+    <style> 
+        .leader { 
+            display: flex; 
+            align-items: center; /* Вертикальное выравнивание по центру */ 
+            margin-bottom: 20px; /* Отступ между лидерами */ 
+        } 
+        .leader h3 { 
+            margin-right: 10px; /* Отступ между заголовком и описанием */ 
+        } 
+    </style> 
+</head> 
+ 
+<body> 
+<nav class="navbar navbar-light bg-light fixed-top">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">Offcanvas navbar</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Offcanvas</h5>
+        <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+      </div>
+      <div class="offcanvas-body">
+        <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">Главная</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Link</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="offcanvasNavbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Dropdown
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="offcanvasNavbarDropdown">
+              <li><a class="dropdown-item" href="#">Action</a></li>
+              <li><a class="dropdown-item" href="#">Another action</a></li>
+              <li>
+                <hr class="dropdown-divider">
+              </li>
+              <li><a class="dropdown-item" href="#">Something else here</a></li>
+            </ul>
+          </li>
+        </ul>
+        <form class="d-flex">
+          <input class="form-control me-2" type="Поиск" placeholder="Поиск" aria-label="Поиск">
+          <button class="btn btn-outline-success" type="submit">Поиск</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</nav>
+    <header class="bg-light py-5"> 
+        <div class="container text-center"> 
+            <h1>Общежитие номер 1</h1> 
+            <p>Здесь куются таланты</p> 
+        </div> 
+    </header> 
+ 
+    <main class="container"> 
+        <section class="py-5"> 
+            <h3>О нас</h3> 
+            <article> 
+                <h2>История</h2> 
+                <p class="d-none d-md-block">В общежитии жили три друга: Артем, "Лобзик", мастер на все руки; Никита, "Кувалда", атлет и вдохновитель; и Александр, "Кирпич", серьезный и мудрый. Однажды они решили участвовать в конкурсе на лучшее оформление коридора. 
+Артем создал деревянные панели, Никита предложил спортивную тематику с фотографиями их тренировок, а Александр разработал концепцию оформления. Работая вместе, они смеялись и делились воспоминаниями. 
+В день конкурса их коридор произвел впечатление, и они заняли первое место! На вечеринке в честь победы друзья осознали, как важна поддержка друг друга. Их дружба только крепла, и они всегда вспоминали этот момент как один из самых ярких в студенческой жизни.</p> 
+            </article> 
+        </section> 
+ 
+        <section> 
+            <h2>Наши лидеры</h2> <br>
+            <div class="row"> 
+                <div class="col-12 col-md-4 leader"> 
+                    <h3>Артём "Лобзик"  </h3> 
+                <img src="Chuvash.jpg" class="radius" width="350" height="350" /> <br>
+<p>
+  <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseWidthExample1" aria-expanded="false" aria-controls="collapseWidthExample">
+    Узнать подробную информацию
+  </button>
+</p>
+<div style="min-height: 120px;">
+  <div class="collapse collapse-horizontal" id="collapseWidthExample1">
+    <div class="card card-body" style="width: 300px;">
+      <h5>Артём "Лобзик" Лутафулин — настоящий мастер на все руки! С детства увлекается woodworking и всегда готов поделиться своими знаниями с друзьями. Его страсть к созданию уникальных вещей из дерева вдохновляет окружающих. Артём не только отлично работает с инструментами, но и обладает чувством юмора, благодаря чему всегда поднимает настроение в компании. Он активно участвует в жизни общежития, организуя мастер-классы по столярному делу и помогая всем желающим реализовать свои творческие идеи. В свободное время Артём обожает путешествовать и открывать для себя новые места, а также проводить вечера </h5> 
+    </div>
+  </div>
+</div>
+  </div> 
+                <div class="col-12 col-md-4 leader"> 
+                    <h3>Алекcандр "Кирпич"</h3> <h5>Александр "Кирпич" Евдoкимов — человек, который всегда готов прийти на помощь! Он увлекается строительством и ремонтом, и его друзья знают, что на него всегда можно положиться, когда требуется что-то починить или построить. Александр обладает отличными навыками в работе с различными материалами и всегда делится своими знаниями с окружающими. Он активно участвует в жизни общежития, организуя различные проекты и помогая другим жильцам. В свободное время Александр любит заниматься спортом, особенно плаванием, и часто проводит время на свежем воздухе с друзьями.ловыпрловплывопрваылпорыавп </h5> 
+                <img src="Sanya.jpg" class="radius" width="350" height="350" /> <br>
+<p>
+  <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseWidthExample2" aria-expanded="false" aria-controls="collapseWidthExample">
+    Оценить лидера
+  </button>
+</p>
+<div style="min-height: 120px;">
+  <div class="collapse collapse-horizontal" id="collapseWidthExample2">
+    <div class="card card-body" style="width: 300px;">
+      Это некий заполнитель для горизонтального сворачивания. По умолчанию он скрыт и отображается при срабатывании.
+    </div>
+  </div>
+</div>
+  </div> 
+                <div class="col-12 col-md-4 leader"> 
+                    <h3>Никита "Кувалда"</h3> <h5>Никита "Кувалда" Стоякин — мастер спорта в настольном теннисе и любитель активного отдыха! Никита всегда полон энергии и готов к новым вызовам. Его страсть к спорту вдохновляет окружающих на занятия физической культурой. Он активно участвует в организации спортивных мероприятий в общежитии и всегда старается вовлечь всех в командные игры. Никита также увлекается фотографией и часто фиксирует яркие моменты жизни своего общежития. В свободное время он любит путешествовать с
+друзьями, открывая новые горизонты и запечатлевая их на своих снимках.</h5> 
+              <img src="Nikita.jpg" class="radius" width="350" height="350" /> <br>
+<p>
+  <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseWidthExample3" aria-expanded="false" aria-controls="collapseWidthExample">
+    Оценить лидера
+  </button>
+</p>
+<div style="min-height: 120px;">
+  <div class="collapse collapse-horizontal" id="collapseWidthExample3">
+    <div class="card card-body" style="width: 300px;">
+      Это некий заполнитель для горизонтального сворачивания. По умолчанию он скрыт и отображается при срабатывании.
+    </div>
+  </div>
+</div>
+  </div> 
+            </div> 
+        </section> 
+    </main> 
+ 
+    <!-- jQuery first, then Popper.js, then Bootstrap JS. --> 
+    <script src="js/jquery.slim.min.js"></script> 
+    <script src="js/popper.min.js"></script> 
+    <script src="js/bootstrap.min.js"></script> 
+</body> 
+ 
+</html>
